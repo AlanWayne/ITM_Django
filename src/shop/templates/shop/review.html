@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление отзыва</title>
+</head>
+<body>
+    <h2>Добавление отзыва</h2>
+    <form action="{% url 'review' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>

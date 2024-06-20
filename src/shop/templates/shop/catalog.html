@@ -1,0 +1,44 @@
+{% extends 'shop/pattern.html' %}
+{% load static %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+{% block title %}
+  OWS: Online Watch Store
+{% endblock %}
+
+{% block body %}
+  <div class="searchbar">
+    <form id="searchForm" method="get">
+      <input type="text" id="query" placeholder="Search" name="search" />
+    </form>
+  </div>
+
+  <div class="catalog">
+    {% for p in product %}
+      <div class="product_sample">
+        <img src="{{ p.image_url.url }}" alt="{{ p.title }}" />
+        <h1>{{ p.name }}</h1>
+        <h2>${{ p.price }}</h2>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+{% block ordering %}
+  <br>
+  <hr class="solid" />
+  <br>
+
+  <div class="sorting">
+    <form action="" method="get">
+      <label>Price:</label>
+      <input id="min-price" type="number" name="min-price" placeholder="$ {{ min_price }}" value="{{ min_price }}" step="any" />
+      <input id="max-price" type="number" name="max-price" placeholder="$ {{ max_price }}" value="{{ max_price }}" step="any" />
+      <br />
+      <div class="sorting-submit">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </div>
+{% endblock %}

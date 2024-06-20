@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      {% block title %}
+
+      {% endblock %}
+    </title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <script src="https://kit.fontawesome.com/09f9b0c7a4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'shop/css/shop.css' %}" />
+  </head>
+  <body>
+    <aside>
+      <img src="{% static 'shop/img/logo.png' %}" alt="logo" />
+      <span class="logo">OWS</span><br />
+      <ul>
+        <a href="{% url 'catalog' %}">
+          <li>
+            <i class="fa-solid fa-list"></i>   Catalog
+          </li>
+        </a>
+        <a href="{% url 'about' %}">
+          <li>
+            <i class="fa-solid fa-circle-info"></i>   About us
+          </li>
+        </a>
+        <a href="">
+          <li>
+            <i class="fa-solid fa-cart-shopping"></i>   Cart
+          </li>
+        </a>
+      </ul>
+
+      {% block ordering %}
+      
+      {% endblock %}
+    </aside>
+
+    <main>
+      {% block body %}
+
+      {% endblock %}
+    </main>
+  </body>
+</html>

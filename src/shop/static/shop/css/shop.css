@@ -1,0 +1,153 @@
+body {
+    background: #fff;
+}
+
+aside {
+    float: left;
+    background: #eee;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    position: fixed;
+    color: #353d3b;
+}
+
+aside img {
+    width: 160px;
+    float: left;
+    margin-left: 20%;
+}
+
+aside .logo {
+    font-size: 64px;
+    font-weight: bold;
+    position: relative;
+    margin-left: 20%
+}
+
+aside ul {
+    font-size: 20px;
+    list-style: none;
+    margin-top: 80px;
+}
+
+aside ul li {
+    color: #353d3b;
+    display: block;
+    margin-top: 20px;
+    transition: transform .3s ease;
+}
+
+aside a:link {
+    text-decoration: none;
+}
+
+aside ul li:hover,
+aside ul a:hover {
+    color: #5d6c69;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+.about {
+    float: left;
+    color: #353d3b;
+    margin-left: 20%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 50px;
+    margin: 20px auto;
+}
+
+.about p {
+    max-width: 75%;
+    margin: 20px auto;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    float: left;
+    color: #353d3b;
+    margin-left: 20%;
+    padding: 3%;
+    text-align: center;
+    /* width: 75%; */
+}
+
+.catalog h1 {
+    font-size: 50px;
+    margin: 20px auto;
+}
+
+.catalog p {
+    max-width: 75%;
+    margin: 20px auto;
+}
+
+.product_sample {
+    box-sizing: border-box;
+    float: left;
+    clear: both;
+    width: 300px;
+    height: 400px;
+    margin: 0.1%;
+    padding: 1%;
+    text-align: center;
+    background: #f0f0f0;
+    border-radius: 10px;
+    color: #353d3b;
+}
+
+.product_sample img {
+    height: 70%;
+    width: 95%;
+    object-fit: contain;
+    margin: 2%;
+    padding: 1%
+}
+
+.product_sample h1 {
+    font-size: 24px;
+    text-align: left;
+    margin-left: 15px;
+    color: #606060;
+}
+
+.product_sample h2 {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.searchbar {
+    float: left;
+    margin-left: 23%;
+    margin-top: 3%;
+}
+
+.searchbar input {
+    padding: 16px;
+    height: 64px;
+    width: 1346px;
+}
+
+.sorting {
+    float: left;
+}
+
+.sorting input {
+    width: 39%;
+    margin: 1%;
+}
+
+.sorting-submit input {
+    float: left;
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 0%;
+}
