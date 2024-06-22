@@ -85,4 +85,3 @@ class TestViews(TestCase):
             Product.objects.filter(name="product_2").count(),
             0,
         )
-
